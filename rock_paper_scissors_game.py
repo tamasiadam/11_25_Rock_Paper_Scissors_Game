@@ -7,11 +7,10 @@ vereseg = 0
 dontetlen = 0
 jatek = True
 print("Üdvözöllek! Ez itt a Kő, Papír, Olló játék!")
-jatekos = input("Kérlek válassz, Kő, papír, olló? ")
-
-print(f"A választásod: {jatekos}")
-print(f"A gép választása: {machine_choice}")
 while jatek == True:
+    jatekos = input("Kérlek válassz, Kő, papír, olló? ")
+    print(f"A választásod: {jatekos}")
+    print(f"A gép választása: {machine_choice}")
     if machine_choice == jatekos:
         print("Döntetlen")
         dontetlen += 1
@@ -33,11 +32,14 @@ while jatek == True:
     elif machine_choice == "olló" and jatekos == "papír":
         print("Vereség!")
         vereseg += 1
-
     print(f"Győzelem: {gyozelem}\nVereség: {vereseg}\nDöntetlen: {dontetlen}")
+        
     again = input("Akarsz még játszani? (i/n) ")
     if again == "n":
         jatek = False
-    elif again == ""
-        print()
-        
+        print("Játék vége!")
+        break
+    elif again == "i":
+        continue
+    else:
+        print("Csak i/n válasz elfogadott!")
